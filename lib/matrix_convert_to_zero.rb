@@ -26,6 +26,9 @@ def matrix_convert_to_0(matrix)
   # end
 
 
+#time complexity O(n^2), space complexity O(n + m) where
+#n and m are row and column sizes
+
   rows = matrix.size
   columns = matrix[0].size
 
