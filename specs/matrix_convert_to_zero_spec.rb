@@ -1,5 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/reporters'
+require "minitest/skip_dsl"
 require_relative '../lib/matrix_convert_to_zero'
 
 # helper method for creating and initializing a matrix with all 1s
