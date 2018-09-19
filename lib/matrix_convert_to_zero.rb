@@ -5,7 +5,7 @@
 
 # Time Complexity: O(n^2) + O(n^2) + O(n * m) = O(n^2) + O(n * m)
 
-# Space Complexity: O(n)
+# Space Complexity: O(n + m)
 def matrix_convert_to_0(matrix)
 
   # creates an array of the positions of 0
