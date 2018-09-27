@@ -4,7 +4,7 @@
 # corresponding row as well as the corresponding column to be 0.
 # Time complexity is O(rows * columns) as we are iterating through rows and columns
 # sequentially.
-# Space complexity is O(rows * columns) as row_zero array could have
+# Space complexity is O(rows + columns) as row_zero array could have
 # upto rows number of elements & column_zero array could have
 # upto columns number of elements
 
