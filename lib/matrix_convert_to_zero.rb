@@ -13,21 +13,19 @@ def matrix_convert_to_0(matrix)
     columns.times do |column|
       if matrix[row][column] == 0
         zeros << {:row => row, :col => column}
+        break
       end
     end
   end
 
   zeros.each do |zero_locations|
-    
     rows.times do |row|
       matrix[row][zero_locations[:col]] = 0
     end
-    
 
     columns.times do |column|
       matrix[zero_locations[:row]][column] = 0
     end
-    
   end
 
 
