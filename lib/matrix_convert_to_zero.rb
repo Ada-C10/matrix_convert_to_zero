@@ -55,30 +55,30 @@ def location_of_zeros(matrix)
 end
 
 ###########################MATRIX SETUP#################################
-def initialize_matrix(rows, columns)
-  # create the matrix using the rows and columns
-  matrix = Array.new(rows){Array.new(columns)}
-
-  # initialize the matrix
-  rows.times do |row|
-    columns.times do |column|
-      matrix[row][column] = 1
-    end
-  end
-
-  return matrix
-end
+# def initialize_matrix(rows, columns)
+#   # create the matrix using the rows and columns
+#   matrix = Array.new(rows){Array.new(columns)}
+#
+#   # initialize the matrix
+#   rows.times do |row|
+#     columns.times do |column|
+#       matrix[row][column] = 1
+#     end
+#   end
+#
+#   return matrix
+# end
 
 
 ###########################TESTING#####################################
-test = initialize_matrix(4,4)
-test[2][3] = 0
-test[1][2] = 0
-
-puts "Matrix: #{test}"
+# test = initialize_matrix(4,4)
+# test[2][3] = 0
+# test[1][2] = 0
 #
-x = location_of_zeros(test)
-puts "Location of zeros: #{x}"
-
-run = matrix_convert_to_0(test)
-puts "Converted matrix: #{run}"
+# puts "Matrix: #{test}"
+# #
+# x = location_of_zeros(test)
+# puts "Location of zeros: #{x}"
+#
+# run = matrix_convert_to_0(test)
+# puts "Converted matrix: #{run}"
