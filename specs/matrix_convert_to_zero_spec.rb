@@ -1,6 +1,8 @@
 require 'minitest/autorun'
 require 'minitest/reporters'
+require 'pry'
 require_relative '../lib/matrix_convert_to_zero'
+
 
 # helper method for creating and initializing a matrix with all 1s
 def initialize_matrix(rows, columns)
@@ -45,6 +47,7 @@ describe "matrix convert to zero" do
       matrix[2][4] = 0 # row 2, column 4
       rows_array = [1, 2]
       columns_array = [3, 4]
+      binding.pry
 
       # method call
       matrix_convert_to_0(matrix)
