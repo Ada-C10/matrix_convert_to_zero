@@ -3,6 +3,17 @@
 # If any number is found to be 0, the method updates all the numbers in the
 # corresponding row as well as the corresponding column to be 0.
 def matrix_convert_to_0(matrix)
+  zero_locations = location_of_zeros(matrix)
+
+  coordinates = 0
+  while coordinates < zero_locations.length do
+    row_to_change = zero_locations[coordinates][0]
+    column_to_change = zero_locations[coordinates][1]
+    coordinates += 1
+  end
+end
+
+def location_of_zeros(matrix)
   r = 0
   zeros = []
   while r < matrix.length do
@@ -22,9 +33,9 @@ def matrix_convert_to_0(matrix)
     r += 1
   end
   return zeros
-  # raise NotImplementedError
 end
 
+###########################MATRIX SETUP#################################
 def initialize_matrix(rows, columns)
   # create the matrix using the rows and columns
   matrix = Array.new(rows){Array.new(columns)}
@@ -39,10 +50,12 @@ def initialize_matrix(rows, columns)
   return matrix
 end
 
+
+###########################TESTING#####################################
 test = initialize_matrix(4,4)
 test[2][3] = 0
 
 puts "#{test}"
 
-x = matrix_convert_to_0(test)
+x = location_of_zeros(test)
 puts "#{x}"
