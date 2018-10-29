@@ -7,25 +7,31 @@ def matrix_convert_to_0(matrix)
   rows = matrix.length
   columns = matrix[0].length
 
-  zeroes = {}
+  rows.times do |r|
+    matrix[r].each_with_index do |num, column|
+      if num == 0
+        matrix[r][0] = 0
+        matrix[0][column] = 0
+      end
+    end
+  end
 
   rows.times do |r|
     columns.times do |c|
-      if matrix[r][c] == 0
-        zeroes[r] = c
-      end
-    end
-  end
-
-  zeroes.each do |row, column|
-    rows.times do |r|
-      if row == r
-        columns.times do |num|
-          matrix[r][num] = 0
+      unless r == 0 || c == 0
+        if matrix[r][0] == 0 || matrix[0][c] == 0
+          matrix[r][c] = 0
         end
       end
-      matrix[r][column] = 0
     end
   end
 
+  if matrix[0][0] == 0
+    columns.times do |c|
+      matrix[0][c] = 0
+    end
+    rows.times do |r|
+      matrix[r][0] = 0
+    end
+  end
 end
