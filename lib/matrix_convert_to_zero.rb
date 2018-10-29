@@ -20,8 +20,11 @@ def matrix_convert_to_0(matrix)
     # change column here
     change_column = 0
     while change_column < matrix.length do
-      matrix[change_column][column_to_change]
+# puts "Inside change column section"
+      matrix[change_column][column_to_change] = 0
+# puts "#{matrix[change_column][column_to_change]}"
       change_column += 1
+# puts "Next iteration"
     end
 
     coordinates += 1
@@ -70,6 +73,7 @@ end
 ###########################TESTING#####################################
 test = initialize_matrix(4,4)
 test[2][3] = 0
+test[1][2] = 0
 
 puts "Matrix: #{test}"
 #
