@@ -9,8 +9,24 @@ def matrix_convert_to_0(matrix)
   while coordinates < zero_locations.length do
     row_to_change = zero_locations[coordinates][0]
     column_to_change = zero_locations[coordinates][1]
+
+    # change row here
+    change_row = 0
+    while change_row < matrix.length do
+      matrix[row_to_change][change_row] = 0
+      change_row += 1
+    end
+
+    # change column here
+    change_column = 0
+    while change_column < matrix.length do
+      matrix[change_column][column_to_change]
+      change_column += 1
+    end
+
     coordinates += 1
   end
+  return matrix
 end
 
 def location_of_zeros(matrix)
@@ -55,7 +71,10 @@ end
 test = initialize_matrix(4,4)
 test[2][3] = 0
 
-puts "#{test}"
-
+puts "Matrix: #{test}"
+#
 x = location_of_zeros(test)
-puts "#{x}"
+puts "Location of zeros: #{x}"
+
+run = matrix_convert_to_0(test)
+puts "Converted matrix: #{run}"
