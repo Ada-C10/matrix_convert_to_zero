@@ -20,5 +20,5 @@ def matrix_convert_to_0(matrix)
   end
 end
 
-# the time complexity of this solution is O(n) where n is the number of elements in the matrix because the most temporally expensive part of the solution is the iteration of each element in the matrix.
+# the time complexity of this solution is O(n * m) where n is the number of elements in each row and m is the number of elements in each column
 # the space complexity is O(1) because the only space required in memory by this solution is a handful of iteration variables. All transformations are performed in place.
