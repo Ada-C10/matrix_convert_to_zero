@@ -23,7 +23,7 @@ def matrix_convert_to_0(matrix)
   #for the number of rows in the array
   matrix.length.times do |row_index|
     zero_row.length.times do |zero_r_i|
-      if row_index == zero_r_i #if the row index matches the zero row index
+      if row_index == zero_row[zero_r_i] #if the row index matches the zero row index
         matrix[row_index].length.times do |column_index| #go through each item in the column of that row
           matrix[row_index][column_index] *= 0 #convert to zero
         end
