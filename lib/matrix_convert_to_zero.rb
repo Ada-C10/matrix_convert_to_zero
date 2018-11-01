@@ -21,6 +21,8 @@ def matrix_convert_to_0(matrix)
 
   #now convert items in specified rows and columns into zeros
   #for the number of rows in the array
+
+  # ======can helper method below =====
   matrix.length.times do |row_index|
     zero_row.length.times do |zero_r_i|
       if row_index == zero_row[zero_r_i] #if the row index matches the zero row index
@@ -34,7 +36,6 @@ def matrix_convert_to_0(matrix)
   matrix.length.times do |row_index| #for each row
     zero_column.length.times do |zero_c_i|
       matrix[row_index].length.times do |column_index| #for each column in row
-        # binding.pry
         if column_index == zero_column[zero_c_i] #if column index is equal to column index in col arr
           matrix[row_index][column_index] *= 0 #convert to zero
         end
