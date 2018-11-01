@@ -4,15 +4,15 @@
 # corresponding row as well as the corresponding column to be 0.
 def matrix_convert_to_0(matrix)
   puts "beginning #{matrix}"
-  (matrix.length - 1).times do |i| #number of rows times do runs 3 times
-    (matrix[i].length - 1).times do |j| #number of columns this runs 4 times
+  (matrix.length).times do |i| #number of rows times do runs 3 times
+    (matrix[i].length).times do |j| #number of columns this runs 4 times
       if matrix[i][j] == 0 #if something in this row/column is 0
         row = i
         column = j #select the column
-        (matrix[row].length - 1).times do |j| #change the whole row to 0
+        (matrix[row].length).times do |j| #change the whole row to 0
           matrix[row][j] = 0
         end
-        (matrix.length - 1).times do |i|
+        (matrix.length).times do |i|
           matrix[i][column] = 0
         end
       end
@@ -21,6 +21,3 @@ def matrix_convert_to_0(matrix)
   puts "end #{matrix}"
   return matrix
 end
-# loop1
-# i = 0 (goes up to 2)
-# j = 0 (goes up to 4)

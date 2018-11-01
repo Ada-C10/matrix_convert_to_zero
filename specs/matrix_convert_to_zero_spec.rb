@@ -53,41 +53,41 @@ describe "matrix convert to zero" do
       verify_matrix(matrix, rows_array, columns_array)
     end
 
-  #   it "rows 0, 1, 2, 3, 4, column 1 are 0" do
-  #     # setup
-  #     rows = 5
-  #     columns = 3
-  #     matrix = initialize_matrix(rows, columns)
-  #     matrix[0][1] = 0 # row 0, column 1
-  #     matrix[1][1] = 0 # row 1, column 1
-  #     matrix[2][1] = 0 # row 2, column 1
-  #     matrix[3][1] = 0 # row 3, column 1
-  #     matrix[4][1] = 0 # row 4, column 1
-  #     rows_array = [0, 1, 2, 3, 4]
-  #     columns_array = [1]
-  #
-  #     # method call
-  #     matrix_convert_to_0(matrix)
-  #
-  #     # validation
-  #     verify_matrix(matrix, rows_array, columns_array)
-  #   end
-  # end
-  #
-  # describe "edge case" do
-  #   it "no 0s" do
-  #     # setup
-  #     rows = 4
-  #     columns = 4
-  #     matrix = initialize_matrix(rows, columns)
-  #     rows_array = []
-  #     columns_array = []
-  #
-  #     # method call
-  #     matrix_convert_to_0(matrix)
-  #
-  #     # validation
-  #     verify_matrix(matrix, rows_array, columns_array)
-  #   end
+    it "rows 0, 1, 2, 3, 4, column 1 are 0" do
+      # setup
+      rows = 5
+      columns = 3
+      matrix = initialize_matrix(rows, columns)
+      matrix[0][1] = 0 # row 0, column 1
+      matrix[1][1] = 0 # row 1, column 1
+      matrix[2][1] = 0 # row 2, column 1
+      matrix[3][1] = 0 # row 3, column 1
+      matrix[4][1] = 0 # row 4, column 1
+      rows_array = [0, 1, 2, 3, 4]
+      columns_array = [1]
+
+      # method call
+      matrix_convert_to_0(matrix)
+
+      # validation
+      verify_matrix(matrix, rows_array, columns_array)
+    end
+  end
+
+  describe "edge case" do
+    it "no 0s" do
+      # setup
+      rows = 4
+      columns = 4
+      matrix = initialize_matrix(rows, columns)
+      rows_array = []
+      columns_array = []
+
+      # method call
+      matrix_convert_to_0(matrix)
+
+      # validation
+      verify_matrix(matrix, rows_array, columns_array)
+    end
   end
 end
