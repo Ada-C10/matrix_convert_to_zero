@@ -82,7 +82,6 @@ describe "matrix convert to zero" do
       matrix = initialize_matrix(rows, columns)
       rows_array = []
       columns_array = []
-
       # method call
       matrix_convert_to_0(matrix)
 
