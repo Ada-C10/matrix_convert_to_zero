@@ -3,7 +3,7 @@
 # If any number is found to be 0, the method updates all the numbers in the
 # corresponding row as well as the corresponding column to be 0.
 def matrix_convert_to_0(matrix)
-  # store coordinates of the 0s here like: [[r1, c2], [r2,c2]]
+  # store coordinates of the 0s here like: [[r1, c1], [r2,c2]]
   targets = []
 
   matrix.length.times do |row|
