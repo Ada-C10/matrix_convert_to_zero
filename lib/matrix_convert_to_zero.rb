@@ -10,18 +10,11 @@ def matrix_convert_to_0(matrix)
   return if rows == 0
   columns = matrix[0].length
 
-
-  puts "Original: "
-  print matrix
-  puts
-
   row_zero = false # track if 0th row needs to be made all zeroes
   column_zero = false # track if 0th column needs to be made all zeroes
   rows.times do |row|
     columns.times do |column|
       if matrix[row][column] == 0
-        # columns_tracking[column] = 0
-        # rows_tracking[row] = 0
         if row == 0
           row_zero = true
         elsif column == 0
@@ -33,11 +26,6 @@ def matrix_convert_to_0(matrix)
       end
     end
   end
-
-  puts "0 row, 0 column: "
-  print matrix
-  puts
-  puts "row_zero is #{row_zero}, column_zero is #{column_zero}"
 
   # if the corresponding 0th row, or 0th column has value of 0, make it 0
   (rows-1).times do |row|
@@ -54,13 +42,10 @@ def matrix_convert_to_0(matrix)
       matrix[0][column] = 0
     end
   end
+
   if column_zero
     (rows).times do |row|
       matrix[row][0] = 0
     end
   end
-
-  puts "Final: "
-  print matrix
-  puts
 end
