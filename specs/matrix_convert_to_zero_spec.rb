@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/reporters'
 require_relative '../lib/matrix_convert_to_zero'
+require 'awesome_print'
 
 def print_matrix(matrix)
   # deduce the rows and columns in the matrix
