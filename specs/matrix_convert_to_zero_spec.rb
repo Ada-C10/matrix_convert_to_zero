@@ -72,6 +72,24 @@ describe "matrix convert to zero" do
       # validation
       verify_matrix(matrix, rows_array, columns_array)
     end
+    
+    it "not all rows, not all columns" do
+      # setup
+      rows = 4
+      columns = 5
+      matrix = initialize_matrix(rows, columns)
+      matrix[0][3] = 0 # row 0, column 1
+      matrix[0][4] = 0 # row 1, column 1
+      matrix[2][1] = 0 # row 2, column 1
+      rows_array = [0, 2]
+      columns_array = [1, 3, 4]
+
+      # method call
+      matrix_convert_to_0(matrix)
+
+      # validation
+      verify_matrix(matrix, rows_array, columns_array)
+    end
   end
 
   describe "edge case" do
