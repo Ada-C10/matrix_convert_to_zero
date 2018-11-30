@@ -51,6 +51,8 @@ def matrix_convert_to_0(matrix)
     end
     i += 1
 
+  end
+
   i = 0
   until rows_to_zero[i] == nil
 
